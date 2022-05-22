@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <div className='container'>
+      <div className='container' style={{marginTop:'10px'}}>
         <Sidebar/>
         <Content/>
       </div>

@@ -1,10 +1,11 @@
 import React from 'react'
 import './sidebar.css'
+import Sidenav from './sidenav/Sidenav'
 
 const Sidebar = () => {
   return (
     <div className='sidebar'>
-        This is the sidebar
+        <Sidenav/>
     </div>
   )
 }

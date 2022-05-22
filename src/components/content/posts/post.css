@@ -1,0 +1,26 @@
+.userimage{
+    width: 100px;
+    height: 100px;
+}
+.post{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.postdetails{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.user_details{
+    display: flex;
+    flex-direction: row;
+}
+.user_details h4{
+    margin-right: 10px;
+}
+.title{
+    margin: 10px 0px;
+}
+.hashtag{
+    margin: 5px 0px;
+}
