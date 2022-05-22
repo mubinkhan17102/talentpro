@@ -1,0 +1,22 @@
+.btnupload{
+    background-color: transparent;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    border: 2px solid lightgray;
+    transition: all .4s;
+}
+.btnupload:hover{
+    background-color: rgb(231, 216, 216);
+}
+.btnlogin{
+    margin-left: 10px;
+    background-color: rgb(255, 53, 86);
+    padding: 12px 22px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    transition: all .4s;
+}
