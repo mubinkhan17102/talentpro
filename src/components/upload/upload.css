@@ -1,0 +1,51 @@
+.uplodform{
+    margin-top: 20px;
+}
+.lavel{
+    margin-bottom: 10px;
+    font-weight: lighter;
+    letter-spacing:normal;
+}
+.formcontrole{
+    margin-bottom: 20px;
+    width: 100%;
+}
+.formcontrole input[type='text']{
+    width: 70%;
+    height: 30px;
+    padding: 10px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+.formcontrole input[type='file']{
+    border: 2px solid lightgray;
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+    width: 70%;
+    border-radius: 5px;
+}
+.btn-submit{
+    width: 70%;
+    height: 40px;
+    font-size: large;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.home-btn{
+    width: 70%;
+    height: 40px;
+    font-size: large;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+    background-color: rgb(253, 24, 81);
+}
+
+.uptitle{
+    width: 70%;
+    text-align: center;
+    margin-top: 20px;
+}

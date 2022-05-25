@@ -1,14 +1,17 @@
 import React from 'react'
 import './sidenav.css';
-
+import {useNavigate} from 'react-router-dom';
 const Sidenav = () => {
+  const nav = useNavigate();
   return (
+    
     <div>
       <button 
         type='button'
         className='btnupload'
+        onClick={()=>nav('/upload')}
       >
-        + Upload
+         + Upload
       </button>
       <button
        type='button'

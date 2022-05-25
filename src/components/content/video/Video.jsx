@@ -1,12 +1,13 @@
 import React from 'react'
 import './video.css';
-import tiktok from '../../../asset/video/tiktok.mp4'
 import Reaction from '../reaction/Reaction';
 
-const Video = () => {
+const Video = (props) => {
+  let url = props.video;
+  url = `http://localhost:5000/${url}`;
   return (
     <div className='videoreaction'>
-        <video src={tiktok} width={300} height={600} controls autoplay></video>
+        <video src={url} width={300} height={600} controls></video>
         <Reaction/>
     </div>
   )

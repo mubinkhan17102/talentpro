@@ -1,8 +1,10 @@
-import React from 'react'
+
 import Video from '../video/Video'
 import './post.css'
 
-const Posts = () => {
+const Posts = (props) => {
+  const {_id, title,video} = props.post;
+  console.log(_id,title,video);
   return (
     <div className='post'>
       <div className='avator'>
@@ -16,12 +18,12 @@ const Posts = () => {
           <h4>username</h4>
           <h4>name</h4>
         </div>
-        <h3 className='title'>This is the post title</h3>
+        <h3 className='title'>{title}</h3>
         <div className='hashtag'>
           <span>#hastag</span><span>#hastag</span><span>#hastag</span>
           <span>#hastag</span><span>#hastag</span><span>#hastag</span>
         </div>
-        <Video/>
+        <Video video={video}/>
       </div>
       <hr />
     </div>
