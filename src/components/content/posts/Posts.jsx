@@ -4,7 +4,6 @@ import './post.css'
 
 const Posts = (props) => {
   const {_id, title,video} = props.post;
-  console.log(_id,title,video);
   return (
     <div className='post'>
       <div className='avator'>
@@ -23,7 +22,7 @@ const Posts = (props) => {
           <span>#hastag</span><span>#hastag</span><span>#hastag</span>
           <span>#hastag</span><span>#hastag</span><span>#hastag</span>
         </div>
-        <Video video={video}/>
+        <Video video={video} id={_id}/>
       </div>
       <hr />
     </div>
