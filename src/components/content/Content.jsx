@@ -19,6 +19,7 @@ const Content = () => {
   return (
     <div className='content'>
       {posts.map((post)=><Posts post={post} key={post._id}/>)}
+      {posts.length === 0 ?<p>Please upload some post or wait for the server</p>:'' }
     </div>
   )
 }

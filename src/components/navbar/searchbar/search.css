@@ -7,7 +7,7 @@
     background-color: gainsboro;
     border: none;
     font-weight: bolder;
-    color: lightgray;
+    color: black;
 }
 input[type=text]:focus{
     outline: 2px solid lightgray;
