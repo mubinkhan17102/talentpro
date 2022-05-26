@@ -1,15 +1,21 @@
 import './upload.css'
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {useNavigate} from 'react-router-dom';
 
-const Upload = () => {
+const Upload = (props) => {
+  const {login,token} = props;
   const nav = useNavigate();
   const [name, setName] = useState('');
   const [file, setFile] = useState('');
   const [msg, setMsg] = useState('');
   const [up, setUp] = useState('');
 
+  useEffect(()=>{
+    if(login === false){
+      nav('/login');
+    }
+  },[]);
 
   const submit = (e)=>{
     e.preventDefault();
@@ -30,30 +36,33 @@ const Upload = () => {
 
   return (
     <div style={{width:'70%'}}>
-      <h3 className='uptitle'>Upload your post</h3>
-        {
-          up!==''?<p style={{marginTop:'10px'}}>{up}</p>:''
-        }
-        
-        {
-          msg!==''?<p style={{marginTop:'10px'}}>{msg}</p>:''
-        }
-        <form onSubmit={submit} className='uplodform'>
-            <div className='lavel' >
-              <h4>Enter the title...</h4>
-            </div>
-            <div className='formcontrole'>
-              <input type="text" value={name} onChange={(e)=>setName(e.target.value)}/>
-            </div>
-            <div className='lavel' >
-              <h4>Choose a file..</h4>
-            </div>
-            <div className='formcontrole'>
-              <input type="file"  aria-label="File browser example" name='file' onChange={(e)=>setFile(e.target.files[0])}/>
-            </div>
-            <input type="submit" className='btn-submit' value="Submit"/>
-        </form>
-        <button type='button' className='home-btn' onClick={()=>nav('/')}>Go Back Home</button>
+      {login === true?
+      <>
+        <h3 className='uptitle'>Upload your post</h3>
+          {
+            up!==''?<p style={{marginTop:'10px'}}>{up}</p>:''
+          }
+          
+          {
+            msg!==''?<p style={{marginTop:'10px'}}>{msg}</p>:''
+          }
+          <form onSubmit={submit} className='uplodform'>
+              <div className='lavel' >
+                <h4>Enter the title...</h4>
+              </div>
+              <div className='formcontrole'>
+                <input type="text" value={name} onChange={(e)=>setName(e.target.value)}/>
+              </div>
+              <div className='lavel' >
+                <h4>Choose a file..</h4>
+              </div>
+              <div className='formcontrole'>
+                <input type="file"  aria-label="File browser example" name='file' onChange={(e)=>setFile(e.target.files[0])}/>
+              </div>
+              <input type="submit" className='btn-submit' value="Submit"/>
+          </form>
+          <button type='button' className='home-btn' onClick={()=>nav('/')}>Go Back Home</button>
+        </>:""}
     </div>
   )
 }

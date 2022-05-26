@@ -4,7 +4,8 @@ import Sidenav from './sidenav/Sidenav'
 import './nav.css'
 import {useNavigate} from 'react-router-dom'
 
-const Nav = () => {
+const Nav = (props) => {
+  const {login,changeToken,changeLogin} = props;
   const naigation = useNavigate();
   return (
     <div className='nav'>
@@ -13,7 +14,7 @@ const Nav = () => {
                 <h2 onClick={()=>naigation('/')} style={{cursor:'pointer'}}>TaskShare</h2>
             </div>
             <Search/>
-            <Sidenav/>
+            <Sidenav login={login} changeToken={changeToken} changeLogin={changeLogin}/>
         </div>
     </div>
   )

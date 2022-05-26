@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react'
 import './content.css';
 import Posts from './posts/Posts';
 
-const Content = () => {
+const Content = (props) => {
+  const {login} = props;
   const [posts , setPosts] = useState([]);
 
   useEffect(()=>{
@@ -18,7 +19,7 @@ const Content = () => {
 
   return (
     <div className='content'>
-      {posts.map((post)=><Posts post={post} key={post._id}/>)}
+      {posts.map((post)=><Posts post={post} login={login} key={post._id}/>)}
       {posts.length === 0 ?<p>Please upload some post or wait for the server</p>:'' }
     </div>
   )

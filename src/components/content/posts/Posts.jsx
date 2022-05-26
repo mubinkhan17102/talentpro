@@ -3,6 +3,7 @@ import Video from '../video/Video'
 import './post.css'
 
 const Posts = (props) => {
+  const {login} = props;
   const {_id, title,video} = props.post;
   return (
     <div className='post'>
@@ -22,7 +23,7 @@ const Posts = (props) => {
           <span>#hastag</span><span>#hastag</span><span>#hastag</span>
           <span>#hastag</span><span>#hastag</span><span>#hastag</span>
         </div>
-        <Video video={video} id={_id}/>
+        <Video video={video} login={login} id={_id}/>
       </div>
       <hr />
     </div>
